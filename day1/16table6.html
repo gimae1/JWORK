@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>table Element</title>
+        <style>
+            table, td, th {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            td,th { padding: 5px; }
+            thead {
+                background-color: gray;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h2>Table Caption</h2>
+        <p>To add a caption to a table, use the caption tag.</p>
+
+        <table style="width:100%">
+            <caption style="margin-bottom:10px;font-weight: bold;">Monthly savings<br></caption>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Savings</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>January</td>
+                    <td>$100</td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td>$50</td>
+                </tr>
+            </tbody>
+            <!-- <caption style="margin-bottom:10px;font-weight: bold;">Monthly savings</caption> -->
+        </table>
+
+    </body>
+</html>

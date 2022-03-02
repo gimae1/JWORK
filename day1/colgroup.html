@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>표 만들기</title>
+	<style>
+		table, th, td {
+			border:1px solid #ccc;
+		}
+		
+	</style>
+</head>
+<body>
+	<table>
+		<caption>colgroup 연습</caption>
+		<colgroup>
+			<col width="200px">
+			<col span="2" width="300px" style="background-color:blue;color:white;">
+			<col style="background-color:rgb(26, 26, 19);"  width="200px">
+		</colgroup>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+		</tr>
+	</table>
+</body>
+</html>
