@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>조합 선택자</title>
+ <meta charset="utf-8">
+<style>
+div {border: 1px solid #000000;padding:10px;}
+/*하위 선택자*/
+div p {
+  background-color: yellow;
+}
+
+/*자식 선택자*/
+div > span {
+  background-color: red;
+}
+</style>
+</head>
+<body>
+
+<h2>조합 선택자(Combinator selectors)</h2>
+둘 이상의 단순 선택자를 포함 할 수 있다. <br>
+단순 선택자 사이에 결합자(+)를 포함 할 수 있다.<br>
+
+<div>
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+<br>
+<div>
+    <span>Paragraph 1 in the div.</span><br>
+    <span>Paragraph 2 in the div.</span><br>
+    <section><span>Paragraph 3 in the div.</span></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+<!--
+1. 하위 선택자:
+두 개의 선택자 사이를 공백으로 구분한다.
+하위 관계, 후손 관계를 의미한다.
+
+2. 자식 선택자 :
+두 개의 선택자 사이를  > 기호로 구분한다.
+자식 관계를 의미한다. 후손은 포함되지 않는다.
+
+-->
+<br><br>
+</body>
+</html>

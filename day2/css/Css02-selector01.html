@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS selector</title>
+    <meta charset="utf-8">
+<style>
+/*요소 선택자*/
+p {
+  text-align: center;
+  color: gray;
+  font-size:16pt;
+  font-weight: bolder;
+} 
+/*아이디 선택자
+p#para1 {
+  text-align: left;
+  color: red;
+}
+*/
+#para1 {
+  text-align: center;
+  color: green;
+}
+#para1 {
+  text-align: right;
+  color: red;/* 가장 마지막에 적용된 속성 적용 */
+}
+
+/*클래스명 선택자*/
+.para1 {
+  text-align: center;
+  color: blue;
+}
+
+/*선택자 우선순위*/
+p#pid{color:lightgreen;}
+#pid{color:hotpink;}
+.pclass{color:yellow;}
+
+.hclass{color:rgb(255, 0, 157);}
+h1{color:rgb(217, 255, 0);text-align: center;}
+
+</style>
+</head>
+<body style="background-color:black;">
+
+<p>일반적인 p엘리먼트</p>
+<p id="para1">아이디가 있는 p엘리먼트</p>
+<p>일반적인 p엘리먼트</p>
+<p class="para1">클래스명이 있는 p엘리먼트</p>
+<p class="para1">클래스명이 있는 p엘리먼트</p>
+<p class="para1">클래스명이 있는 p엘리먼트</p>
+<!-- 선택자의 우선순위  -->
+<!--<p id="pid" class="pclass">우선순위1</p>-->
+<p id="pid" class="pclass" style="color: red;">우선순위pid</p>
+<h1 class="hclass">우선순위2</h1>
+
+<!--
+▶ 선택자(selector) 란:
+스타일을 지정할 대상을 선택자라 한다.
+여러 개의 선택자 기술이 가능하다. 
+나열은 ,(콤마, 쉼표)로 구분하여 나열한다.
+
+▶ 단순선택자(simple selector) : 
+엘리먼트의 이름(태그명), 아이디, 클래스명 등으로 선택
+1. 엘리먼트의 이름(=태그명=요소명) 선택자:
+선택자를 요소명으로 넣는다.
+예시: p { text-align: center; }
+2. 아이디 선택자 :
+아이디명 앞에 #을 붙인다.
+아이디는 단 한 개만 존재할 수 있다.(권장)
+여러 개를 기술할 수도 있고, 적용도 되지만, 스크립트나 id속성에 관련된 엘리먼트(label과 같은)를 사용 시
+예상치 못한 결과값이 나올 수 있다.
+예시: #아이디명 또는 p#아이디명 { text-align: center; }
+3. 클래스 선택자  : 
+클래스명 앞에 .(마침표)를 붙인다. 
+예시:  .클래스명 또는 p.클래스명 { text-align: center; }
+
+▶  그룹 선택자(Group selector) : 여러 개의 selector를 선택하여 적용
+예시:  p , #userid , .job { text-align: center; }
+
+▶ 범용 선택자(Universal Selector) : html의 모든 요소에 적용
+예시: * {  text-align: center; color: blue; }
+-->
+</body>
+</html>

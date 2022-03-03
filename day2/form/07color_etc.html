@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+     <meta charset="utf-8">
+     <title> 웹 폼</title>
+  </head>
+  <body>
+	<form>
+		<fieldset>
+			<legend>과 티셔츠 설문</legend>
+			<p>올해 과 티(T)를 만들려고 합니다. 원하는 색상을 추천해 주세요.</p>
+			<label>선호색상  <input type="color" value="#00ff00" name="color"> </label><br> 
+        	<label>텍스트</label><input type="text"><br>  
+			<label>파일선택</label><input type="file" name="file"><br><!-- get 방식으로 전송하면 파일 이름만 전송을 하게 된다.  -->
+    		<label>비활성화</label><input type="text" value="비활성화" name="disabled" disabled><br>  <!-- 비활성화는 데이터 전송도 막는다. -->  
+    		<label>숨김타입</label><input type="hidden" value="숨김타입" name="hidden"><br>    
+        	<label>숫자선택</label><input type="number" name="number"><br>  
+
+		</fieldset>
+		<input type="submit" value="전송하기">
+
+  </form>
+  </body>
+</html>

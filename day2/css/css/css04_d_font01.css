@@ -1,0 +1,38 @@
+/* CSs04_d_font01.html 관련 CSS */
+h1#a { font-family: "Audiowide", sans-serif; }
+h1#b {  font-family: "Sofia", sans-serif; }
+h1#c { font-family: "Trirong", serif; }
+.ft { font-family: Copperplate, Papyrus, fantasy; }
+/* @font-face 글꼴을 정의하는 시스템코드@font-face  
+서체는 저작권이 있으므로, 무료 서체가 아닌 것을 사용할 경우 문제가 발생할 수 있다. 따라서 웹페이지 제작시 꼼꼼이 확인해보고 사용할 것.
+무료 한글 폰트 참고: https://brunch.co.kr/@jade/203
+*/
+@font-face {
+font-family: makeFont; /*폰트명 선언하기*/
+src: url("../font/HMKMAMI.TTF");
+/* src: url("../font/CAMBRIAB.TTF"); */
+/* src: url("../font/CONSOLAB.TTF"); */
+}
+div#ff { font-family: makeFont; font-weight: bolder;} 
+
+/* 사용가능한 글꼴
+1. 트루 타입 글꼴(TrueType Fonts, TTF)
+트루 타입 글꼴은 Apple과 Microsoft가 공동으로 개발한 외곽선 글꼴 표준입니다.
+이 글꼴은 맥(MAC)과 윈도우(Window) 운영체제에서 가장 오랫동안 사용되어 온 대표적인 글꼴입니다.
+트루 타입 글꼴은 해당 글꼴이 다양한 글꼴 크기에서 어떻게 표현될지에 대한 수준 높은 제어를 할 수 있게 해줍니다.
+2. 오픈 타입 글꼴(OpenType Fonts, OTF)
+오픈 타입 글꼴은 사용자가 자신의 컴퓨터에서 크기를 조절할 수 있는 글꼴 표준입니다.
+이 글꼴은 트루 타입 글꼴의 뒤를 잇기 위해 Microsoft에서 개발하였으며, 현재는 거의 모든 컴퓨터에서 사용되고 있습니다.
+오픈 타입 글꼴은 유니코드를 기반으로 다양한 스크립트를 지원하며, 한 번에 여러 스크립트를 함께 지원할 수 있다는 장점을 가지고 있습니다.
+3. 웹 오픈 글꼴(The Web Open Font Format, WOFF)
+웹 오픈 글꼴은 웹 페이지에서 사용할 수 있는 글꼴 표준이며, 현재 W3C에서 사용을 권장하고 있는 글꼴 표준입니다.
+
+이 글꼴은 추가 메타데이터(metadata)를 넣어 압축한 트루 타입 또는 오픈 타입 글꼴입니다.
+4. 웹 오픈 글꼴 2.0(The Web Open Font Format 2.0, WOFF 2.0)
+이 글꼴은 웹 오픈 글꼴 1.0 버전보다 더 나은 압축률을 제공하는 트루 타입 또는 오픈 타입 글꼴입니다.
+5. SVG 글꼴(SVG Fonts/Shapes)
+SVG 글꼴은 SVG 요소로 텍스트를 그릴 때 그 표본으로 사용되는 글꼴 표준입니다.
+이 글꼴은 SVG 문서에 CSS를 적용할 수 있도록 해줄 뿐만 아니라, @font-face 규칙도 적용할 수 있게 해줍니다.
+6. 임베디드 오픈 타입 글꼴(Embedded OpenType Fonts, EOT) 
+임베디드 오픈 타입 글꼴은 Microsoft가 웹 페이지에서 사용하기 위해 개발한 내장형 글꼴로, 오픈 타입 글꼴입니다.
+*/

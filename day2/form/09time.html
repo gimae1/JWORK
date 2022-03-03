@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>time 속성</title>
+</head>
+<body>
+	<form>
+		<h3>대관시간을 선택하세요(오늘)</h3>
+		<!-- time은 오전/오후 시간으로 나뉘어 설정 가능. 값은 24시간제로 표시됨. -->
+		<label>시작 시간<input type="time" value="09:00" name="start1"></label>,
+		<label>종료 시간<input type="time" value="18:00" name="end1"></label>
+		
+		<!-- datetime yyyy-mm-dd형식 다음에 시간을 의미하는 T값이 자동으로 붙음. 뒤에 24시간제로 시간 표시됨.  -->
+		<h3>대관시간을 선택하세요(다른날짜)</h3>
+		<label>시작 시간<input type="datetime-local" min="2000-01-01T00:00" max="2050-12-31T23:59" value="2016-03-02T09:00" name="start2"></label>,
+		<label>종료 시간<input type="datetime-local" value="2016-03-02T06:00" name="end2"></label>
+		<input type="submit" value="전송">
+	</form>
+</body>
+</html>

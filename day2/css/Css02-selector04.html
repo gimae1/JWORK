@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <title>가상클래스(:) 선택자</title>
+  <style>
+/* 아무것도 실행되지 않은 상태(초기 상태) */
+a:link {
+  color: red;
+}
+
+/* 해당 링크를 방문하고 난 후의 상태(방문기록에 남은 상태) */
+a:visited {
+  color: green;
+}
+
+/* 마우스포인터가 위에 올려져만 있는 상태 */
+/* a.highlight:hover {
+  color: green;
+}  */
+
+a:hover {
+  color: green;
+} 
+
+a:hover {
+  color: hotpink;
+}
+
+/* 마우스를 누르고 있는 상태 */
+a:active {
+  color: blue;
+}/* active 는 hover 밑에 있어야만 적용이 가능하다 */
+  </style>
+</head>
+
+<body>
+  <h2>CSS Links</h2>
+<p><b><a href="https://www.daum.net" target="_blank">DAUM으로 이동</a></b></p>
+<p><a class="highlight" href="https://www.naver.com" target="_blank">네이버로 이동</a></p>
+<!-- 
+  (권장) :hover 속성은 :link 와 :visited 속성 뒤에 와야 한다.
+  (권장) :active 속성은 :hover 속성 뒤에 와야 한다.
+  위의 규칙이 지켜지지 않을 경우 :active나 :hover속성이 적용 안될 수 있다.
+-->
+  <br><br>
+</body>
+
+</html>

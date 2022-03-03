@@ -1,0 +1,18 @@
+/* z-index속성은 층 수를 정하는 속성이다. */
+body { margin: 0; padding: 0; background-color: black; }
+h2 {margin: 0;}
+span { color:white; }
+div.static { position: static; background-color: #73AD21;margin: 0; padding: 0; }
+div.relative { position: relative; left: 30px; top: 20px;  background-color: lightpink; }
+/* div.relative { position: relative; left: 30px; top: 20px;  background-color: lightpink; z-index: 999;} */
+div.fixed { position: fixed; bottom: 0; right: 0; width: 300px; background-color: skyblue;
+  }
+div.absolute1 { position: absolute; top: 5px; right: 0; width: 300px; background-color: red; }
+
+div.relative2 { position: relative; width: 500px; height: 500px; background-color: greenyellow ;} 
+div.absolute2 { position: absolute; top: 80px; right: 0; width: 200px;
+background-color: white;}
+
+/* div.sticky { position: sticky; top: 0; padding: 5px; background-color: #cae8ca; border: 1px solid #000000; } */
+
+div.sticky { position: sticky; top: 0; padding: 5px; background-color: #cae8ca; border: 1px solid #000000; z-index: 9999;}

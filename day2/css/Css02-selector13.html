@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>속성 선택자</title>
+<meta charset="utf-8">
+<style>
+/* 속성 선택자는 특정 속성을 가진 요소를 선택하는 데 사용된다. */
+/*
+형식 1 : a[target] => 엘리먼트명[속성명]
+형식 2 : a[target = "_blank"] 
+=> 엘리먼트명[속성명="속성값"] or 엘리먼트명[속성명=속성값]
+*/
+h1 {margin-bottom:10px; background-color:lavender;}
+
+/* h1의 자식 a엘리먼트에서 target속성이 있는 요소 모두 선택 */
+h1 > a[target] { background-color: yellow; }
+
+/* a엘리먼트에서 id가 present인 요소 선택 */
+a#present { text-decoration: none; }
+
+/* a엘리먼트에서 id(#)가 naver인 요소 선택 */
+a#naver { text-decoration: overline wavy blue; }
+
+/* a엘리먼트에서 class(.)가 daum인 요소 선택 */
+a.daum { text-decoration: underline dotted red; }
+
+/* a엘리먼트에서 name속성의 값이 google인 요소 선택 */
+a[name="google"] { text-decoration: line-through; }
+
+/* 
+text-decoration 속성
+형식:  text-decoration: 선위치 선모양 선색상;
+선위치 : 
+none : 선 없음 / overline : 윗줄 /
+underline : 밑줄 / line-through : 취소선(가운데 선)
+선 스타일(선모양) :
+wavy : 물결 / dotted : 점선 / double : 겹선
+*/
+
+input[type=text] {
+  width: 150px;
+  display: block;
+  margin-bottom: 10px;
+  background-color: yellow;
+}
+
+input[type=button] {
+  width: 120px;
+  margin-left: 35px;
+  display: block;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS [attribute] Selector</h1>
+<h1><a href="Css02-selector13.html" id="present">현재 페이지</a></h1>
+<h1><a href="https://www.naver.com" id="naver">네이버</a></h1>
+<h1><a href="https://www.daum.net" target="_blank" class="daum">다음</a></h1>
+<h1><a href="https://www.google.com" target="_top" name="google">구글</a></h1>
+
+<h2>Styling Forms</h2>
+<form name="input" action="" method="get">
+  Firstname:<input type="text" name="Name" value="Peter" size="20">
+  Lastname:<input type="text" name="Name" value="Griffin" size="20">
+  <input type="button" value="Example Button" onclick="alert('Example Button')">
+</form>
+</body>
+</html>

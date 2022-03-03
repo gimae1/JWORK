@@ -1,0 +1,23 @@
+/* Css03_b_display01.html관련 CSS */
+div { border: 1px solid #000000; border-radius: 5px;}
+h1 { margin-top: 0;}
+a { text-decoration: none; font-weight: bolder; color:white; padding-right: 50px; }
+#ust { list-style-type: none; background-color: black; margin:0; padding:10px; }
+/* #ust { padding: 0; } */
+/* #ust > li { display: inline; width:400px;height:100px;} */
+/* #ust > li { display: inline; margin:50px;} */
+/* li { display: inline-block; width:400px;height:100px; } */
+/* li { display: inline-block; margin:50px;} */
+/* span.spst { display: block; background-color: red ; padding:50px;} */
+span.spst { display: block; background-color: red ; margin:100px;}
+
+/* Css03_b_display02.html관련 CSS */
+/* img { vertical-align: middle; } */
+#imgNone > img, #imgHidden > img { width: 200px; height: 100px; }
+div#imgNone:hover img { display: block; }
+#imgNone img { display: none; }
+div#imgHidden:hover img { visibility:visible; }
+#imgHidden img { visibility:hidden; }
+/*  
+참고: display: block; 속성 설정 시 요소 표시 방법만 블럭으로 변경되고 요소 유형은 변경되지 않는다. block으로 설정했다하여 원래 인라인 요소 내부에 다른 블록 요소를 둘 수 있다는 의미는 아니다. 일부 블럭 속성을 적용할 수 있도록 해준다.
+*/
