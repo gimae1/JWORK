@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Etc Control Statement</title>
+</head>
+<body>
+	<h1>continue 문</h1>
+	<p>홀수단, 홀수번째 구구단 출력하기</p>
+	<script>
+		gugudan:  //label명 : 분기점
+		for (var i = 2; i <= 9; i++) {
+			for (var j = 1; j <= 9; j++) {
+				if ((i*j) % 2 == 0)
+					 continue;//자기자신을 최초로 감싸고있는 조건문(for)으로 돌아간다
+					//continue gugudan;//라벨을 달아줬을 경우에는 라벨로 돌아간다
+				document.write(i + " * " + j + " = " + (i*j) + "<br>");
+				if(j==9) document.write("<hr>");
+			}
+		}
+	</script>
+	
+</body>
+
+</html>

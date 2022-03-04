@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>history</title>
+		
+<script>
+function goBack() {
+	if(arguments.length>0) window.history.go(Number(arguments[0]));//2번째 전으로 웹페이지 이동
+    else window.history.back();//바로 전으로 웹페이지 이동
+}
+function goForward() {
+	if(arguments.length>0) window.history.go(Number(arguments[0]));//2번째 앞으로 웹페이지 이동
+    else window.history.forward();//바로 앞으로 웹페이지 이동
+}
+</script>
+	
+	</head>
+<body>
+
+<h2>BOM</h2>
+<h3>window.history object</h3>
+<input type="button" value="1번 뒤로" onclick="goBack()">
+<input type="button" value="2번 뒤로" onclick="goBack(-2)">
+<input type="button" value="1번 앞으로" onclick="goForward()">
+<input type="button" value="2번앞으로" onclick="goForward(2)">
+
+</body>
+</html>

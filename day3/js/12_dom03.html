@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head><body>
+	<p>Hello World</p>
+	<p id="p1">Hello World</p>
+
+	<script>
+	document.getElementById("p1").style.color = "blue";
+	document.getElementById("p1").style.fontFamily = "Broadway";
+	document.getElementById("p1").style.fontSize = "25pt";
+	</script>
+
+	<div style="width:200px; height:270px; margin-left:50px; padding:20px; text-align:center; border:1px solid #000;">
+		<p>전구 on/off</p>
+		<img id="myImage" src="images/pic_bulboff.gif" style="width:100px"><br>
+		<button onclick="document.getElementById('myImage').src='images/pic_bulbon.gif'">전원on</button>
+		<button onclick="document.getElementById('myImage').src='images/pic_bulboff.gif'">전원off</button>
+	</div>
+</body></html>

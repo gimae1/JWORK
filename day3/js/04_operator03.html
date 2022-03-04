@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title> 동치연산자 ==와 ===의 차이</title>
+	<script>
+		// 자바스크립트의 == 연산자는 다른 언어와는 다르게 강제 형변환을 실행한다.//유사비교연산자 동치 연산자
+		document.write(254 == "254" , "<br>");
+		document.write(false == null , "<br>");
+		document.write(false == undefined , "<br>");
+		document.write(false == 0 , "<br>");
+		document.write(true == 1 , "<br>");
+		document.write(true != null , "<br>");//????
+		document.write(undefined == null , "<br><hr>");
+
+		// === 연산자: 형변환 처리를 하지 않고 비교함. //일치 비교 연산자
+		document.write(254 === "254" , "<br>");
+		document.write(false === null , "<br>");
+		document.write(false === undefined , "<br>");
+		document.write(false === 0 , "<br>");
+		document.write(true === 1 , "<br>");
+		document.write(true !== 2 , "<br>");
+		document.write(undefined === null , "<br>");
+	</script>
+</head>
+<body>
+</body>
+</html>

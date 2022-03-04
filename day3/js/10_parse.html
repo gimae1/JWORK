@@ -1,0 +1,21 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8"><title>제목</title>
+<script>
+	function func1() {
+		// var won1 = Number("1000원");
+		// var dollar1 = Number("1$");
+		// alert(won1 + " : " + dollar1);
+		var won1 = Number("1000");//number라는 생성자 호출문
+		var dollar1 = Number("1");
+		alert(won1 + " : " + dollar1);
+	}
+
+	function func2() {
+		var won2 = parseInt("1000원");
+		var dollar2 = parseInt("1$");
+		alert(won2 + " : " + dollar2);
+	}
+</script></head><body>
+	<input type="button" onclick="func1();" value="Number 결과">
+	<input type="button" onclick="func2();" value="parseInt 결과">
+</body></html>

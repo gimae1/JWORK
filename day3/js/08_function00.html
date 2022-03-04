@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<title>제목</title>
+	<style>
+	#demo {text-decoration: underline;font-weight:bolder; color:red; }
+	</style>
+	<script>
+	/*함수란(function) :
+	하나의 특별한 목적의 작업을 수행하도록 설계된 독립적인 블록을 말함.
+	실행하려면 반드시 호출이 필요하다.
+	여러 곳에서 호출이 가능하다.
+	리턴타입을 기술할 필요가 없다.
+	매개변수의 자료형을 기술할 필요가 없다.*/
+
+	//호이스팅 처리 됨. 호이스팅: 아래에 선언된 것을 위로 끌어올리는 기능.
+	//오류 발생 안됨.
+		func1(); //함수 호출문
+		function func1() {
+			document.write("선언적 함수1<br>");//이런 형식이 선언적 함수
+		}
+		func1(); 
+		function func2() {
+			document.write("선언적 함수2<br>");
+		}
+		func2(); 
+	</script>
+</head>
+<body>
+	<pre style="border:1px solid #000;"><!-- 입력한 그대로 출력할수 있게 함 -->
+<span style="font-weight: bolder;">자바스크립트 function 형식</span><br><hr>
+
+	function 함수명(매개변수1, 매개변수2,...){<br>
+		자바스크립트 코드들;<br>
+		...<br>
+		(반환문 선택)return 값;
+	}<br>
+
+	</pre>
+	<script>func1(); //위의 함수 호출 됨.</script>
+	
+</body></html>

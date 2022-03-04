@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Parameters and Arguments</title>
+</head>
+<body>
+	<h1>함수의 오버로딩</h1>
+	<script>
+    // 자바스크립트는 함수의 오버로딩이 없다. 
+    // 가장 마지막에 기술된 함수가 덮어쓰기가 된다.
+    function addNum(x) { return x; }
+    function addNum(x, y, z) { return x + y + z; }
+    function addNum(x, y) { return x + y; }
+
+    document.write("인수가 3개 모두 전달되면 반환값은 " + addNum(1, 2, 3) + "입니다.<br>");	
+    document.write("인수가 2개만 전달되면 반환값은 " + addNum(1, 2) + "입니다.<br>");
+    document.write("인수가 1개만 전달되면 반환값은 " + addNum(1) + "입니다.<br>");
+    document.write("인수가 아무것도 전달되지 않으면 반환값은 " + addNum() + "입니다.");
+//argument 이용한 오버로딩
+    function sum() {
+        var result = 0;
+        for (var i = 0; i < arguments.length; i++) {
+            result += arguments[i]; //result = result + arguments[i];
+        }
+        return result;
+    }
+    console.log("arguments객체를 이용한 오버로딩 처리");
+    console.log("인수가 2개(10,20)인 함수 호출 결과: "+ sum(10, 20));
+    console.log("인수가 3개(10,20,30)인 함수 호출 결과: "+ sum(10, 20, 30));
+    console.log("인수가 4개(10,20,30,40)인 함수 호출 결과: "+ sum(10, 20, 30, 40));
+    console.log("인수가 5개(10,20,30,40,50)인 함수 호출 결과: "+ sum(10, 20, 30, 40, 50)); 
+</script>
+	
+</body>
+
+</html>

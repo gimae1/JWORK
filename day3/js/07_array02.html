@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Array(배열)</title>
+
+</head>
+<body>
+	<h1>배열의 참조</h1>
+	<script>
+		//배열의 길이가 자동으로 증가됨.
+		var arr = ["JavaScript"];
+		var element = arr[0];
+		arr[1] = 10;
+		arr[2] = element;
+		document.write("배열 arr의 요소: [" + arr + "]<br>");
+		document.write("배열 arr의 길이: " + arr.length + "<br>");
+		delete arr[2]; //delete :배열 요소(값)만 삭제됨. 공간은 삭제 안됨.
+		document.write("배열 arr의 요소: [" + arr + "]<br>");
+		document.write("배열 arr의 길이: " + arr.length + "<br>");
+		arr.pop(); //pop() :배열 공간 삭제됨. //마지막 공간부터 제거 (value 까지)
+		document.write("배열 arr의 요소: [" + arr + "]<br>");
+		document.write("배열 arr의 길이: " + arr.length + "<br>");
+
+		arr.push("Script"); //push()를 통한 요소 추가//마지막에 추가
+		document.write(arr + "<br>");
+		arr = arr.slice(0,2); //push()를 통한 요소 추가//첫번째 인자는 0부터 두번재 인자는 1부터 
+		document.write(arr + "<br>");
+		document.write("배열 arr의 길이(slice): " + arr.length + "<br>");
+
+		arr[arr.length] = 100; //length를 통한 요소 추가
+		document.write(arr + "<br>");
+
+		arr[10] = "자바스크립트"; // 특정 인덱스를 지정하여 요소 추가
+		document.write(arr + "<br>");
+		document.write(arr[7]); //값 할당받은 것이 없음.
+	</script>
+</body>
+
+</html>

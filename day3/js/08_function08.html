@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>Arrow() 함수</title>
+  </head>
+<body>
+
+<h2>Arrow() 함수</h2>
+<p>- function 키워드, return 키워드 및 중괄호({})를 입력할 필요가 없다.</p>
+<p>- IE11이전 버전에서는 지원되지 않는다.</p>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+// 자바의 람다식과 유사
+// const x = function(x, y) { return x*y ; } ;를 축약한 형식이다.
+const x = (x, y) => x * y; 
+document.getElementById("demo").innerHTML = "x(5, 5)호출값은: " + x(5, 5);
+
+const y = () => 50 % 3 ; 
+document.getElementById("demo2").innerHTML = "y()호출값은: " + y();
+</script>
+</body>
+</html>

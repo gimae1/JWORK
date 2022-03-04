@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head><body>
+	<p class="intro">one : p Element</p>
+	<span class="intro"><em>two: span Element</em></span><br>
+	<p class="intro">three : p Element</p><hr>
+	<p id="demo"></p>
+
+	<script>
+	var x = document.getElementsByClassName("intro");
+	document.write("x객체의 배열 길이: " + x.length+"<br>");
+	document.getElementById("demo").innerHTML += x[1].innerHTML;
+	document.getElementById("demo").innerHTML += "<br>tagName: " + x[1].tagName;
+	document.getElementById("demo").innerHTML += "<br>length: " + x.length;
+	</script>
+</body></html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>변수 선언 및 사용</title>
+</head>
+<body>
+
+<h2> 변수 선언 및 사용 </h2>
+<p>let키워드는 지역의 의미가 있다.</p>
+<!-- <p>const키워드는 지역의 의미가 있다.</p> -->
+<p id="demo" style="border:1px solid #000;"></p>
+
+<script>
+	let x = 10;
+	{  
+		let x = 2;
+		document.write(x);
+	}
+	document.getElementById("demo").innerHTML = x;
+</script>
+</body>
+</html>

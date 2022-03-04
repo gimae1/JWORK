@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>변수 선언 및 사용</title>
+	<script>
+	
+	document.write("다시 쓰기<br>");//지워진다
+		function pClick(){
+			// innerText : 해당 엘리먼트의 텍스트를 가져온다.
+			var y = document.getElementsByClassName("pclass")[0].innerText;
+			// var y = document.getElementsByName("pname")[0].innerText;//속성이 name 인 것 
+			// var y = document.getElementsByTagName("div")[0].innerText;//element 
+			alert("y: " + y);
+			document.write("다시 쓰기<br>");
+			document.write("답: " + y);/* 어디에 있느냐에 따라 지워지는지 안지워지는지 잘 봐야한다 */
+		}
+	</script>
+</head>
+<body>
+
+<h2> 변수 선언 및 사용 </h2>
+<p>var키워드는 지역의 의미가 없다.</p>
+<p id="demo" name="pname" class="pclass" onclick="pClick()" style="cursor: pointer;">클릭하세요.</p>
+<script>
+	var x = 10;
+	{  
+		var x = 2222;
+	}
+	// innerHTML : 해당 요소안에 html내용으로 넣는다. 요소제거 안되고 안의 데이터만 변경됨.
+	document.getElementById("demo").innerHTML = x;/* 안의 내용 지우고 새롭게 덮어ㅅ쓴다 */
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8"><title>제목</title>
+<script> 
+	
+	//for ...of (배열값 순환) : 배열객체의 요소값을 떼어옴.
+	var arr = [1, 2, 3];
+
+	for (let item of arr) { //arr이 배열객체인 경우 item은 배열요소안의 값을 떼어 옴.
+	  document.write(item+"<br>");
+	}
+	document.write("<hr>");
+	
+	// for ...in (인덱스값(key) 순환) : key값이나 index값을 떼어올 수 있는 객체만 가능. index, key모두 String자료형으로 반환됨.
+	for (let item in arr) { //arr이 배열객체인 경우 item은 배열요소의 인덱스번호를 떼어 옴.//string 으로 떼어 온다
+	  document.write(item+"<br>");
+	}
+	
+	var obj = {1 :'a', 2 :'b', 3 :'c'} ;
+	//object객체는 java의 HashMap과 유사하다. key, value로 구성되어 있다.
+	//object객체의 요소의 값에 접근하려면 객체명[key]로 접근한다.
+	for ( let idx in obj) { //obj가 objcet객체인 경우 idx는 key값을 떼어 옴.
+		console.log("key값: "+idx+", val값: "+obj[idx]);
+	}
+</script></head>
+<body>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>setTimeout</title>
+</head>
+<body>
+    <p id="demo"></p>
+	<button onclick="clearTimeout(myVar)">Stop time</button>
+
+	<script>
+	// 5초에 myTimer 함수 1번만 실행후 종료함
+    // 알아서 종료되므로 솔직히 clearTimeout을 사용할 필요가 없다.
+	var myVar = setTimeout(myTimer, 5000);//원래 표현 window.setTimeout()
+	function myTimer() {
+		document.getElementById("demo").innerHTML = '5초가 지났습니다.';
+	}
+	</script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<title>setInterval, clearInterval</title>
+</head><body>
+	<p id="demo"></p>
+	<button onclick="clearInterval(myVar)">Stop time</button>
+
+	<script>
+	// 1초마다 myTimer 함수 실행
+	var myVar = setInterval(myTimer, 1000); //원래 표현 window.setInterval()
+	function myTimer() {
+		var d = new Date();
+		// toLocaleTimeString() : 현재 시간을 가져오는 함수. 시스템 내장 시간을 가져옴
+		document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+	}
+	</script>
+</body></html>

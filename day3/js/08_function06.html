@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+    <title>arguments객체</title>
+   
+  </head>
+<body>
+
+<h2>arguments객체</h2>
+<p>자바스크립트 함수의 내장객체이며, 매개변수의 정보를 가지고 있다.</p>
+<p id="demo"></p>
+<p id="demo2"></p>
+
+<script>
+function myFunction(a, b) {
+  return "0번째 매개변수의 값은 " + arguments[0] + "이며, 총 매개변수의 개수는 " +arguments.length + "개 이다.";
+}//arguments 호출 시 던져주는 매개인자 자동으로 (배열로 받아)읽어오는
+document.getElementById("demo").innerHTML = myFunction(4, 3);
+
+//함수의 매개변수를 일치시키지 않아도 arguments객체를 통해 해당 매개변수를 가져올 수 있다.
+function findMax() {
+  // Infinity : 리터럴 값이라고 보면 됨. 무한대를 의미하는 숫자형 값이며, 양의 무한대 값을 나타내는 값임.
+  // -Infinity : 음의 무한대 값을 나타내는 값임.
+  let max = -Infinity;
+  for(let i = 0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+    if (arguments[i] > max) {
+      max = arguments[i];
+    }
+  }
+  return max;
+} 
+document.getElementById("demo2").innerHTML = findMax(4, 5, 6);
+
+</script>
+</body>
+</html>

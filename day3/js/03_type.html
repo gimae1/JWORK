@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>JS</title>
+	<script>
+		var t; 
+		document.write("값이 초기화되지 않은 상태: "+t, "<br>");/* , : 문자열 결합의 뜻 */
+		t="hello"; 
+		document.write("값이 초기화된 상태: "+t, "<br>");
+		t=null; 
+		document.write("값이 비워진 상태: "+t, "<br>");
+		t="";
+		document.write("값이 빈문자열인 상태: "+t, "<br>");
+
+		//배열 자료형 : 요소값의 자료형이 달라도 상관없다.
+		let fruits = ["Banana", 50 , false , "Mango"];/* 자료형 달라도 함께 담을 수 있다. */
+		document.write(fruits[0] +", "+ fruits[1] +", "+ fruits[2] +", "+ fruits[3] +"<br>");
+/* 문자열 연결 + 로 한다. */
+		const car = {type:"Fiat", model:"500", color:"white"};//꼭 key: value 쌍으로 와야 한다.java의 hashmap자료형과비슷
+		//java의 최상위 객체 =object javascript 의 최상위 객체 :window
+		document.write(Object.keys(car)[0]+ ":"+ car.type +"<br>");
+		document.write(Object.keys(car)[1]+ ":"+ car["model"] +"<br>");
+		document.write(Object.keys(car)[2]+ ":"+ car.color +"<br>");
+	</script>
+</head>
+<body>
+</body>
+</html>

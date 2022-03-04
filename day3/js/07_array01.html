@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript Array(배열)</title>
+
+</head>
+<body>
+	<h1>배열(array)이란 : </h1>
+	<pre> 
+이름과 인덱스로 참조되는 정렬된 값의 집합
+-배열값: 배열 요소(element)
+-배열에서의 위치: 인덱스(index) *0부터 시작
+-배열 요소의 자료형이 달라도 된다.
+-배열 요소의 인덱스가 연속적이지 않아도 되며, 특정 배열 요소가 비어 있을 수도 있다.
+-자바스크립트의 배열은 Array 객체로 다뤄진다.
+
+*형식
+1. var arr = [배열요소1, 배열요소2,...];  // 배열 리터럴을 이용
+2. var arr = Array(배열요소1, 배열요소2,...); // Array 객체의 생성자 이용
+3. var arr = new Array(배열요소1, 배열요소2,...); // new 연산자를 이용한 Array 객체 생성
+		</pre>
+	<script>
+		var arrLit = [1, true, ,"JavaScript"];
+		var arrObj = Array(1, true, null,"JavaScript");
+		var arrNewObj = new Array(1, true,"JavaScript");
+		
+		document.write(arrLit + "<br>");
+		document.write(arrObj + "<br>");
+		document.write(arrNewObj);
+	</script>
+	
+</body>
+
+</html>

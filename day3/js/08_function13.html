@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+        <title>Object자료형</title>
+    </head>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p>버튼을 클릭해보세요.</p>
+<p id="demo"></p>
+<button onclick="person.fullName()">클릭</button>
+
+<script>
+    // object객체의 값으로 존재하는 함수
+    // this키워드 : 함수의 소유자를 의미함.
+    // 이 스크립트에서는 this가 person객체가 됨.
+    const person = {
+      firstName: "John",
+      lastName: "Doe",
+      id: 5566,
+      fullName: function() {
+        document.getElementById("demo").innerHTML = this.firstName + " " + this.lastName;
+      }
+    };
+ </script>
+
+</body>
+</html>
+

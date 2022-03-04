@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head><body>
+	<p id="intro"><a href="#">Hello World!</a></p>
+	<p id="demo"></p>
+	<p id="demo2"></p>
+
+	<script>
+	var pid = document.getElementById("intro");
+	document.getElementById("demo").innerHTML = pid.innerHTML;
+	document.getElementById("demo2").innerHTML = pid.innerText;
+	</script>
+</body></html>

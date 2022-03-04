@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html><head>
+	<meta charset="utf-8">
+	<title>screen</title>
+</head><body>
+	<button onclick="cfn()">클릭</button>
+	<button onclick="canfn()" style="display:none;">클릭</button><br>
+	<script>
+		document.write("화면의 너비(width)는: " + screen.width);
+		document.write("<br>화면의 폭(height)은: " + screen.height);
+		document.write("<br>작업표시줄을 제외한 화면의 너비(width)는: " + screen.availWidth);
+		document.write("<br>작업표시줄을 제외한 화면의 폭(height)은: " + screen.availHeight);
+
+		function cfn(){
+			document.getElementById('demo').style.visibility="visible";
+			var pic = document.getElementById('demo');
+			
+			pic.style.width = screen.availWidth+"px";
+			pic.style.height = screen.availHeight+"px";
+			pic.style.backgroundColor = "green" ;
+			document.getElementsByTagName('button')[0].style.display="none";
+			document.getElementsByTagName('button')[1].style.display ="inline";
+		}
+		
+		function canfn(){
+			document.getElementsByTagName('button')[0].style.display="inline";
+			document.getElementsByTagName('button')[1].style.display ="none";
+			var pic = document.getElementById('demo').style.visibility="hidden";
+		}
+	</script>
+	<div id="demo">div박스</div>
+</body></html>

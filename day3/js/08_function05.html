@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>생성자 함수와 자동호출 함수</title>
+    <meta charset="utf-8">
+    
+    <style>
+      .pClass { font-weight: bolder; }
+    </style>
+  </head>
+<body>
+
+<h2>JavaScript Functions</h2>
+<p class="pClass">자바스크립트에서는 함수 생성자를 통하여 함수를 생성할 수 있다.</p>
+<p id="demo"></p>
+
+<p class="pClass">자바스크립트에서는 자동 호출 함수를 이용하여 호출하지 않아도 실행할 수 있다.</p>
+<p id="demo2"></p>
+
+<script>
+const myFunction = new Function("a", "b", "return a * b");
+document.getElementById("demo").innerHTML = "myFunction(4,3)호출 결과: " + myFunction(4, 3);
+
+//함수 선언 및 실행//자동실행함수
+	(function (a, b) {
+  		document.getElementById("demo2").innerHTML = "자동호출 함수 실행 " + a + b;
+	})("값은: ", 1);
+
+</script>
+
+</body>
+</html>

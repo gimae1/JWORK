@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Function</title>
+        <style>
+            body { margin:0; padding:0; }
+        </style>
+        <script>
+          var color= ["green", "aqua", "blue", "black"];
+          var i = 0;
+          function changeColor() {
+            i++;
+            if(i >=color.length) i=0;
+
+            var bgColor = document.getElementById("bgCol");//body 
+            bgColor.style.backgroundColor = color[i];
+				//style="background-color : aqua;"
+            var pColor = document.getElementsByTagName("p")[0];
+            pColor.style.color= "white";
+            
+            var hColor = document.getElementsByTagName("h2")[0];
+            hColor.style.color= "white";
+          }
+
+          function bgWhite(){
+            var bgColor = document.getElementById("bgCol");
+            bgColor.style.backgroundColor = "white";
+
+            var pColor = document.getElementsByTagName("p")[0];
+            pColor.style.color = "black";
+
+            var hColor = document.getElementsByTagName("h2")[0];
+            hColor.style.color= "black";
+          }
+
+        </script>
+    </head>
+<body id="bgCol">
+<div style="margin-left:20px;">
+  <h2>JavaScript Functions</h2>
+  <p>색상을 변경해보세요.</p>
+  <button onclick="changeColor()">색상 변경</button>
+  <button onclick="bgWhite()">초기값으로</button>
+</div>
+
+</body>
+</html>

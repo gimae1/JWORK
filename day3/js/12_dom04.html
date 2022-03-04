@@ -1,0 +1,17 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8"><title>Document</title>
+<script>
+	
+	window.onload = function() {
+		//createElement(태그명) : 웹문서 내에 해당 엘리먼트(태그)를 만들어 준다. 
+		//객체명.setAttribute("속성명", "속성값") : 해당 객체의 속성을 설정해 준다.
+		// appendChild(객체명) : 웹문서내의 지정 요소안의 맨 마지막에 자식요소로 해당 객체를 추가해 준다. 이전의 객체들(텍스트를 포함한 모든 엘리먼트 요소들)은 유지됨.
+		var pic = document.createElement('img');
+		pic.setAttribute('src', 'images/history.png');
+		document.body.getElementsByTagName("p")[0].appendChild(pic);
+		// document.body.appendChild(pic);
+	}
+</script></head><body>
+	<p>Hello DOM<br><br></p>
+	<p>Document Object Model</p>
+</body></html>

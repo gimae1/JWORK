@@ -1,0 +1,13 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8"><title>제목</title>
+<script>
+	var today = new Date(); // Date 자료형의 객체 생성
+	//getMonth() : 0~11까지 (원래의 달 수보다 1이 작게 리턴됨.)//month 의 index 값을 가져온다고 생각
+	var mon = today.getMonth() + 1;
+	var week = [ "일", "월", "화", "수", "목", "금", "토" ];
+	// getDay : 0(일요일)~6(토요일)까지 가져오는 함수//일주일로  array를 만든다고 생각하자
+	var day = week[today.getDay()];//요일에 대한 숫자 인덱스
+
+	document.write(today.getFullYear() + "년 " + mon + "월 " 
+	+ today.getDate() + "일 " + day + "요일");
+</script></head><body></body></html>

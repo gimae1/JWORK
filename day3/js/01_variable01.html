@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>변수 선언 및 사용</title>
+	<script>
+		//alert("자바스크립트의\n줄바꿈입니다.");
+		// var 예약어 사용
+		
+	write rt	
+		box;
+		document.write(box ,"<br>");
+
+		var box = 30;/* 호이스팅 가능 */
+		document.write(box ,"<br>");/* document : <html>태그 안쪽을 뜻하는 객체 */
+
+		var box = "재선언 가능";
+		document.write(box + "<br>");
+var rt;
+		/* a = true;
+		document.write(a, "<br>"); */
+
+		// let 예약어 사용//지역의 개념 호이스팅 안됨
+		let a = true;
+		document.write(a, "<br>");
+
+		// let a = "재선언 불가";
+		a = "재할당 가능";
+		document.write(a, "<br>");
+
+		// const 예약어 사용
+		//선언만 하는 것은 불가
+		// const b; 
+		const b = "상수";
+		// const b = "재선언 불가";
+		// b = "재할당 불가";
+		document.write(b, "<br>");
+
+	</script>
+</head>
+<body>
+</body>
+</html>

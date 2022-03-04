@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>form 속성</title>
+<style> 
+form { border:1px solid #555;border-radius: 5px;padding:10px; }
+input.ipst {padding: 12px 20px; margin: 8px 0; border: 1px solid #555;outline: none; }
+input.ipst:focus { background-color: lightblue; }
+
+input.ipst1 { padding: 12px 20px; margin: 8px 0; border: 3px solid #ccc; outline: none; 	 }
+input.ipst1:focus { border: 3px solid #555; }
+</style>
+</head>
+<body>
+<form>
+    <h1>input요소를 클릭하세요.-배경색변경</h1>
+    <input type="search" id="selsearch" class="ipst" name="selsearch" placeholder="검색어를 입력하세요">
+   <input type="text" id="uId" class="ipst" name="uId" placeholder="아이디를 입력하세요.">
+    <input type="password" id="uPass" class="ipst" name="uPass" placeholder="비밀번호를 입력하세요.">
+    <br>    
+    <input type="submit" class="ipst" value="로그인">
+</form><br>
+
+<form>
+    <h1>input요소를 클릭하세요.-테두리색변경</h1>
+    <input type="search" id="selsearch1" class="ipst1" name="selsearch1" placeholder="검색어를 입력하세요">
+   <input type="text" id="uId1" class="ipst1" name="uId1" placeholder="아이디를 입력하세요.">
+    <input type="password" id="uPass1" class="ipst1" name="uPass1" placeholder="비밀번호를 입력하세요."> 
+    <br>     
+    <input type="submit" class="ipst" value="로그인">
+</form>
+
+</body>
+</html>

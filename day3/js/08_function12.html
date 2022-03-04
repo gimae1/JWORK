@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset = "UTF-8">
+<title> 함수에 의한 변수의 범위 </title>
+<script>
+	var vr = 10;
+	{//영역만 갈라 줌
+		var vr = 25;
+		document.write("블록함수 vr값: "+ vr + "<br>");
+	}
+	document.write("전역함수 vr값: "+ vr + "<br>");
+	
+
+	var vari = 10;
+	function fnc() {
+		var vari = 25;
+		document.write("지역함수 vari값: "+ vari + "<br>");
+		return vari;		
+	}
+	
+	document.write("전역함수 vari값: "+ vari + "<br>");
+	fnc();
+
+</script>
+</head>
+<body>
+</body>
+</html>

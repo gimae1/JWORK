@@ -1,0 +1,60 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8"><title>제목</title>
+<script> 
+for (const val of ['a', 'b', 'c']) { 
+	console.log(val); // 'a','b','c' 
+} 
+
+for (const val of 'abc') { 
+	console.log(val); // 'a','b','c' 
+	console.log(typeof(val)); // 'a','b','c' 
+	
+} 
+
+// 에러: object객체는 (k,v)가진 객체인데 iterable객체는 index만 가진 객체만 가능하다.
+// for ( let val of {1 :'a', 2 :'b', 3 :'c'} ) {
+// 	console.log(val); 
+// }
+
+var obj = {1 :'a', 2 :'b', 3 :'c'} ;
+
+for (let idx in obj) {
+	console.log("key값: "+idx+", val값: "+obj[idx]);
+}
+
+var obj1 = [
+		{'a':1-1, 'b':1-2, 'c':1-3},
+		{'d':2-1, 'e':2-2, 'f':2-3},
+		{'g':3-1, 'h':3-2, 'i':3-3}
+];
+
+for ( let idx in obj1) {
+	console.log(idx);
+// 	console.log(typeof(idx));
+}
+for ( let idx of obj1) {
+	console.log(idx);
+ 	console.log(typeof(idx));
+}
+
+var obj2 = {
+		'one': {'a':'1-1', 'b':'1-2', 'c':'1-3'},
+		'two': {'d':'2-1', 'e':'2-2', 'f':'2-3'},
+		'three': {'g':'3-1', 'h':'3-2', 'i':'3-3'}
+};
+
+//key값만 가져오기
+for ( let idx in obj2) {
+	console.log(idx);
+// 	console.log(typeof(idx));
+}
+
+//value값만 가져오기
+for ( let idx in obj2) {
+	console.log(obj2[idx]);
+// 	console.log(typeof(obj2[idx]));
+}
+</script></head>
+<body>
+</body>
+</html>

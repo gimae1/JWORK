@@ -1,0 +1,34 @@
+<!DOCTYPE html><html><head>
+<meta charset="utf-8"><title>제목</title>
+<style>
+	select {padding:2px;}
+</style>
+<script>
+	window.onload = function() {
+		// HTML 엘리먼트에 이벤트 핸들러 지정
+		// onclick: 해당 input버튼 요소에 onclick속성 및 연결될 test()함수 지정하기
+		document.getElementById("btn").onclick = test;//함수 호출문
+		// onchange: 해당 select요소에 onchange속성 및 연결될 test2()함수 지정하기
+		document.getElementById("sel").onchange = function() { 
+			test2(this.value);
+		};
+	};
+
+	function test() { alert("사용자 정의 함수"); }
+	function test2(email) {
+		// HTML의 특정 엘리먼트를 객체로 접근
+		var text = document.getElementById("email2");
+		// 특정 객체의 value 속성에 값을 지정
+		text.value = email;
+	}
+</script></head><body>
+	<!-- 이벤트 핸들러 지정을 위해 id 속성 필수 -->
+	<p><input type="button" value="테스트" id="btn"></p>
+	<p>이메일: <input type="text" id="email1"> @ <input type="text" id="email2">
+	<select id="sel">
+		<option value="">직접입력</option>
+		<option value="naver.com">네이버</option>
+		<option value="gmail.com">구글</option>
+		<option value="daum.net">다음</option>
+	</select></p>
+</body></html>
