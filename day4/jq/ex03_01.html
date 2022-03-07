@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 탐색 선택자 </title>
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		$("#menu li:even").css({"background-color":"red"});//index로 인식
+		$("#menu li:odd").css({"background-color":"green"});//index로 인식
+		// eq(인덱스번호(0부터)) : 인덱스번호에 해당되는 요소 선택  
+		$("#menu1 li").eq(2).css({"background-color":"yellow"});
+		// lt(인덱스번호) : 인덱스 번호보다 작은, 이전 요소 모두 선택(자신 제외)
+		$("#menu1 li:lt(2)").css({"background-color":"aqua"});//==prevAll()
+		// gt(인덱스번호) : 인덱스 번호보다 큰, 이후 요소 모두 선택(자신 제외)
+		$("#menu1 li:gt(2)").css({"background-color":"hotpink"});//==nextAll()
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>탐색 선택자</h1>
+		<ul id="menu">
+			<li>내용1</li>
+			<li>내용2</li>
+			<li>내용3</li>
+			<li>내용4</li>
+		</ul>
+	</div>
+
+	<div id="wrap1">
+		<h1>탐색 선택자</h1>
+		<ul id="menu1">
+			<li>내용1</li>
+			<li>내용2</li>
+			<li>내용3</li>
+			<li>내용4</li>
+			<li>내용5</li>
+		</ul>
+	</div>
+</body>
+</html>

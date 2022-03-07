@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>이벤트</title>
+<style>
+	ul { float: left; margin: 30px; }
+</style>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	$(function() {
+		$('a').click(function() {			
+			$("img").attr("src",  $(this).attr("href")); 
+				return false; //기본 이벤트 막기(페이지 이동 막는다) 현재 페이지에 이미지 표시하도록 설정
+		});
+	});
+</script></head><body>
+	<ul>
+		<li><a href="img/cute_dog.jpg">사진1</a></li>
+		<li><a href="img/img_girl.jpg">사진2</a></li>
+	</ul>
+	<img>
+</body></html>

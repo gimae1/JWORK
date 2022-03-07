@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스크롤 이벤트 </title>
+<style>
+div img{
+ width : 300px;
+}
+</style>
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function(){	
+	var wSize = 300;
+	$(document).on("mousewheel",function(event) {
+		var wheel = event.originalEvent.wheelDelta;
+	
+		console.log(wheel);
+		if(wheel>0){
+			wSize+=20
+			$("div img").css("width",wSize + "px");
+		}else{
+			wSize-=20
+			$("div img").css("width",wSize + "px");
+		}
+		 $(".text_line").empty();
+		$(".text_line").append("원본 가로사이즈: "+ $('div img').width() +"px");
+	});
+	$(document).on("mousedown", function(event) {
+
+		 var mWhich = event.which;
+		 console.log(mWhich);
+
+		if(mWhich=2){
+			$("div img").css("width","300px");
+		}else{
+			return ;
+			
+		}
+	});
+	
+});
+
+
+</script>
+</head>
+<body>
+<div> Wheel up : size up , Wheel down : size down, Wheel click : 100% </div>
+<div class="index_img">
+<img src="img/index.jpg">
+<p class="text_line"></p>
+</div>
+</body>
+</html>

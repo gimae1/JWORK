@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 이벤트 </title>
+<style>
+	body{font: 12pt Malgun Gothic, "맑은고딕",sans-serif;}
+	.zBtn{font-size: 12pt;}
+</style>
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(function() {
+		var fSize = 14;
+		$(".zBtn .btn").on("click", zInOut);
+		
+		function zInOut( ) {
+			if($(this).hasClass("zOut")){
+				if(fSize<=8) return false;
+				fSize--;
+			} else if($(this).hasClass("zIn")){
+				if(fSize>=50) return false;
+				fSize++;
+			} else {
+				fSize = 12;
+			}
+			$(".fontSize").text(fSize + "pt");
+
+			/*속성명:
+			객체로 사용시 -(대시)제거 카멜기법으로 표기.
+			css속성명 그대로 사용하는 경우는 따옴표로 묶어줌.*/
+			$("body").css({'font-size':fSize + "pt"});
+			// $("body").css({fontSize:fSize + "pt"});
+		}
+	});
+</script>
+</head>
+<body>
+	<p class="zBtn">
+		<button class="btn zOut">-</button>
+		<button class="btn originBtn">100%</button>
+		<button class="btn zIn">+</button>
+	</p>
+	<p class="fontSize">12pt</p>
+	<div id="wrap">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas feugiat consectetur nibh, ut luctus urna placerat non. Phasellus consectetur nunc nec mi feugiat egestas. Pellentesque et consectetur mauris, sed rutrum est. Etiam odio nunc, ornare quis urna sed, fermentum fermentum augue. Nam imperdiet vestibulum ipsum quis feugiat. Nunc non pellentesque diam, nec tempor nibh. Ut consequat sem sit amet ullamcorper sodales.
+	</div>
+</body>
+</html>

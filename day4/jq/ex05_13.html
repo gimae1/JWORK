@@ -1,0 +1,30 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>속성</title>
+<style>
+	img { width: 140px; height: 120px; cursor: pointer;}
+</style>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+	$(function() {
+		$('img').eq(1).width(190);
+		$('img').eq(1).height(170);
+		$('body img').on("click", function(event) {
+			 // event.target은 이벤트가 발생한 대상 엘리먼트
+			 // event.target == this
+			 var $target = $(event.target);
+			 $("#ptxt").empty();
+
+			if($target.hasClass("origin")){
+				$("#ptxt").append("원본 가로사이즈: "+ $target.width() +"px<br>");
+				$("#ptxt").append("원본 세로사이즈: "+ $target.height() +"px");
+			}else{
+				$("#ptxt").append("확대 가로사이즈: "+ $target.width() +"px<br>");
+				$("#ptxt").append("확대 세로사이즈: "+ $target.height() +"px");
+			}
+		});
+	});
+</script></head><body>
+	<img src="img/cellphone.jpg" class="origin">
+	<img src="img/cellphone.jpg" class="large">
+	<p id="ptxt"></p>
+</body></html>

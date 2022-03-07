@@ -1,0 +1,28 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>셀렉터</title>
+<style type="text/css">
+   em { font-size: 12pt; line-height: 40pt; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {
+      // 체이닝 기법 : 한 객체에 다양한 메서드를 줄줄이 이어서 사용하는 방법
+      // 아이디선택자
+      $("#tit").css("background-color","#0f0").css("border", "2px solid #f00");
+      // 클래스 선택자
+      $(".tit").css("background-color","#ff0").css("border", "2px dashed #f00");
+      // 요소 선택자
+      $("h1").css("background-color","#0ff").css("border", "2px dashed #f00");
+      // 후손 선택자
+	   $('div em').css('border', '3pt solid #f00').css('padding', '7pt 9pt 11pt 13pt');   
+      $('span em').css('border', '1pt dotted #0f0').css('padding', '7pt 10pt');       
+   });
+</script>
+</head><body>
+<h1>h1태그 1</h1>
+<h2 id="tit">아이디 선택자</h2>
+<h2 class="tit">클래스 선택자</h2>
+<h1>h1태그 2</h1>
+<div><em>Hello!</em><em>jQuery</em><em>forever</em></div>
+<span><em>Good Bye!</em><em>javascript</em></span> 
+</body></html>

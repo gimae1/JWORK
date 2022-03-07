@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(function(){
+		// slice(시작인덱스, 마지막인덱스-1) : 시작인덱스요소부터 (마지막인덱스-1)번째의
+		// 요소까지 선택
+		$("#menu1 li").slice(1,3).css({"background-color":"#ff0"});
+		// 요소명.only-child : 해당 요소가 단 하나인 경우 요소가 품고 있는 자식 요소 모두 선택
+		$("li:only-child").css({"background-color":"#0ff"});
+	});
+</script>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu1">
+		<li>내용1-1</li>
+		<li>내용1-2</li>
+		<li>내용1-3</li>
+		<li>내용1-4</li>
+	</ul>
+	<ul id="menu2">
+		<li><span>menu2의 첫번째 li :</span><span>내용2-1</span></li>
+		<!-- <li><span>menu2의 두번째 li :</span>내용2-2</li> -->
+	</ul>
+</body>
+</html>

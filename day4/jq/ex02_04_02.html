@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="jquery/3.5.1/jquery.js"></script>
+<style>
+	/* html, body {padding:0!important; margin:0!important;} */
+	/* html, body {padding:0; margin:0;} */
+</style>
+<script>
+	$(function(){
+/* 		$(".txt1").parents().css({
+			"border":"5px solid red",
+			"padding" : "10px"
+		}); */
+
+ 		$(".txt2").parents("section").css({//section만
+ 			"border":"5px solid red",
+ 			"padding" : "10px"
+ 		});
+	});
+</script>
+</head>
+<body>
+	<h1 class="title">선택자</h1>
+	<section>
+		<div>
+			<p class="txt1">내용</p>
+		</div>
+	</section>
+	<section>
+		<div>
+			<p class="txt2">내용</p>
+		</div>
+	</section>
+</body>
+</html>

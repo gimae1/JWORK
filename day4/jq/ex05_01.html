@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>해당 엘리먼트에 자식 엘리먼트로 추가하기</title>
+<style type="text/css">
+div { float:left; margin:25px; }
+</style>
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script>
+   $(function() {
+      var fruits=["apple", "banana", "orange", "melon"];
+      var cars=["sonata", "grandure", "genesis"];
+      // prepend() : 선택된 요소 안의 첫번째에 새로운 요소나 콘텐츠를 추가한다.
+      $.each(fruits, function(index, value){
+    	  $("#fruit_list").prepend($("<li>"+value+"</li>"));
+      });
+      // prependTo() : 선택된 요소를 해당 요소의 첫번째에 추가한다.
+      $.each(cars, function(index, value){
+    	  $("<li>"+value+"</li>").prependTo("#car_list");
+      });
+   });
+</script>
+</head>
+<body>   
+   <div> 
+      <b> 과일 리스트 </b>
+      <ul id="fruit_list"><li>grape</li></ul>
+   </div> 
+   
+   <div> 
+      <b> 차종 리스트 </b>
+      <ul id="car_list"><li>soul</li></ul>
+   </div> 
+</body>
+</html>

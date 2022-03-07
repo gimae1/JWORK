@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head><meta charset="UTF-8">
+        <title>이벤트</title>
+        <style>
+            #divBox {width:300px;border:1px solid #555;padding:10px;}
+        </style>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+		$(document).ready(function () {
+            // click() : 클릭이벤트를 처리하고자 할때. 정적이벤트임 ~클릭만 한다!~
+			$("button[name='btn']").click(function () {
+				$("body").append("click!!!<br>");
+			});
+
+            /* 
+            동적이벤트(라이브 이벤트) 등록 방식//
+            $(선택자).on(이벤트속성, 지정자, 콜백함수) : 
+            on함수를 이용. 
+            선택자를 해당 이벤트가 발생될 지정자보다 상위 요소(부모,조상 요소들)를 선택자로
+            해야 한다.
+            */
+            //동적이벤트(라이브 이벤트) 등록 방식. 이벤트 상속됨.
+            //$(document).on("click", "button[name='add']", function () {//on : ~ 할때 ex)click 할 때
+//          	   $("body").on("click", "button[name='add']", function () {
+//             $("#divBox").append("<button name='add'>+</button>");
+//            });
+
+           // 선택자와 지정자가 같을 경우 실행되지 않는다.
+//              $("button[name='add']").on("click", "button[name='add']", function () {
+//                 $("#divBox").append("<button name='add'>+</button>");
+//             }); 
+
+           //동적이벤트(라이브 이벤트) 등록 방식이 아님. 이벤트는 상속되지 않는다.
+             /* $("button[name='add']").on("click", function () {
+                 $("#divBox").append("<button name='add'>+</button>");
+             });  */
+		});
+	</script>
+    </head>
+    <body>
+        <button name='btn'>클릭</button><br>
+        <button name='add'>+</button>
+        <div id="divBox"></div>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>값</title>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript">
+            $(function( ) {
+                $(".a1").on("click", function(e){
+                    e.preventDefault() : 이벤트를 발생시킨 객체의 기본 이벤트를 차단
+                   
+                    $(".txt1").css({"background-color":"#ff0"});
+                    e.preventDefault();//기본 이벤트를 막는다. return false;
+                });
+                $(".a2").on("click", function(e){
+                    $(".txt2").css({"background-color":"#0ff"});
+                });
+                $(".btn1").on("dblclick", function(){
+                    $(".txt3").css({"background-color":"#0f0"});
+                });   
+            });
+        </script>
+    </head>
+    <body>
+        <p><a href="http://www.naver.com/" class="a1">네이버</a></p>
+        <p class="txt1">내용1</p>
+        <p><a href="http://www.daum.net/" class="a2" target="_blank">다음</a></p>
+        <p class="txt2">내용2</p>
+        <p><button class="btn1">버튼</button></p>
+        <p class="txt3">내용3</p>
+    </body>
+</html>

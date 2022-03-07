@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>탐색 선택자(selector)</title> 
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script>
+	function exeFnc(){		
+		$(".wrap_1 p.active").removeClass("active").addClass("on");
+		//attr("속성명", "속성값") : 해당 요소에 해당 속성과 값을 설정한다.
+		$(".wrap_1 p:eq(2) a").attr("href","http://www.naver.com");
+		//val("값") : 해당 요소에 값을 설정한다.
+		$(".wrap_1 p:eq(3) input").val("Korea");//매개변수없으면 가져와라 매개변수 있으면 세팅하라
+		//after("요소") : 해당 요소 뒤에 추가할 요소를 넣는다.
+		$(".wrap_2 p:eq(1)").after("<p>After(추가1)</p>");
+		//before("요소") : 해당 요소 앞에 추가할 요소를 넣는다.
+		$(".wrap_2 p:eq(1)").before("<p>Before(추가2)</p>");
+		//unwrap() :선택한 요소의 부모 요소를 삭제한다.
+		//wrapInner() : 선택한 요소의 자식 요소를 감싼다.
+		$(".wrap_3 p").unwrap().wrapInner("<strong>");
+		$('button').hide();
+	}
+</script>
+</head>
+<body>
+	<div class="wrap_1">
+		<p>텍스트1</p>
+		<p class="active">내용2</p>
+		<p><a href="#">네이버</a></p>
+		<p><input type="text" value="Hello"></p>
+	</div>
+	<div class="wrap_2"> 
+		<p>내용5</p>
+		<p>내용6</p>
+	</div>
+	<div class="wrap_3">
+		<div>
+			<p>내용7</p><!-- <p><strong>내용7</strong></p> -->
+			<p>내용8</p><!-- <p><strong>내용8</strong></p> -->
+		</div>
+	</div><br><br>
+	<button onclick="exeFnc()">제이쿼리 적용하기</button>
+</body>
+</html>

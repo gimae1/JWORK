@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+
+<script src="jquery/3.5.1/jquery.js"></script>
+<script>
+	$(function(){
+		// $(“선택자”).closest(“div”) : 해당 요소의 조상(부모 포함) 요소들 중 가장 가까운 div요소를 선택함.
+		$(".txt1").closest("div").css({
+		// $(".txt1").closest("section").css({
+			"background-color" : "yellow",
+			"border":"2px solid #f00",
+			"padding" : "10px"
+		});
+	});
+</script>
+</head>
+<body>
+	<h1 class="title">선택자</h1>
+	<div>
+		<div style="background-color: green;">상위 DIV</div>
+		<section>
+			<p class="txt1">내용</p>
+		</section>
+	</div>
+</body>
+</html>

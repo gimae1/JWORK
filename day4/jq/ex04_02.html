@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>셀렉터</title>
+        <script src="jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        /*
+        prop("속성명") : JavaScript의 프로퍼티(property)를 핸들링 함.
+        prop("속성명") - 프로퍼티는 JavaScript에서 사용하는 속성 정보를 가져오므로 
+        HTML의 정보와 일치하기도 하고 일치하지 않을 수 있다.
+        prop("속성명" , "속성값") - 해당 요소의 속성 정보를 속성값으로 설정(변경)한다.
+        
+        .attr() 을 통해서는 element가 가지는 속성값이나 정보를 조회 (style, src, rowspan 등) 하거나 세팅하는 형식의 업무를 하고
+        .prop() 를 통해서는 element가 가지는 실제적인 상태 (활성화, 체크, 선택여부 등) 를 제어하는 업무를 하는 것이 좋겠다.
+        */
+
+            function bFnc() {
+                var $goLink = $('#link');// <a href="#none" id="link">버튼1</a>
+                console.log($goLink.attr('href'));//눈에 보이는 href 만 가져온다 #none
+                console.log($goLink.prop('href'));
+
+                var $goLink = $('.link');
+                console.log($goLink.attr('href'));
+                console.log($goLink.prop('href'));
+
+                var $goLink = $('#amove');
+                $goLink.attr('href',"https://www.google.com/");
+
+                var $goLink = $('.amove');
+                $goLink.prop('href',"#none");
+
+            }
+        </script>
+    </head>
+    <body>
+        <p>
+            <a href="#none" id="link">버튼1</a>
+            <a href="https://www.naver.com" class="link">버튼2</a>
+
+            <a href="#none" id="amove">이동1</a>
+            <a href="https://www.naver.com" class="amove">이동2</a>
+            <br><br><button onclick="bFnc()">적용하기</button>
+        </p>
+    </body>
+</html>

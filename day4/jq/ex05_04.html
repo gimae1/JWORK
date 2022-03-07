@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>셀렉터</title>
+        <style type="text/css">
+            em {
+                font-size: 20pt;
+                line-height: 20pt;
+                margin: 20px;
+                color: blue;
+            }
+        </style>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('p em').css('background-color', 'yellow').each(function () {
+                        $('.result1').append($(this).text() + " ");
+                });
+                $('div > em').css('background-color', 'pink').each(function () {
+                        $('.result2').append($(this).text() + " ");
+               });
+            });
+        </script>
+    </head>
+    <body>
+        <p>
+            <em>one</em>
+            <em>two</em>
+            <span><em>three</em></span>
+        </p>
+        <div>
+            <em>four</em>
+            <span><em>five</em></span>
+            <em>six</em>
+        </div>
+        <hr>
+        <div>
+            <span>ancestor descendant로 검색된 엘리먼트:</span>
+            <span class="result1"></span>
+        </div>
+        <div>
+            <span>parent &gt; child로 검색된 엘리먼트:</span>
+            <span class="result2"></span>
+        </div>
+    </body>
+</html>

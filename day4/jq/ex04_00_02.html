@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>셀렉터</title>
+        <script src="jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        /*
+        attr() : HTML 의 속성(attribute)을 핸들링 함.        
+        attr("속성명") - HTML Element에 있는 속성 정보를 string로 가져온다.
+        attr("속성명" , "속성값") - 해당 요소의 속성 정보를 속성값으로 설정(변경)한다.
+        removeAttr("속성명") - 해당 요소의 속성을 제거한다.        
+        */
+
+        function gbb() {
+            //srcVal = img/math_img_1.jpg"
+            var srcVal = $("#sec_1 img").attr("src");
+            console.log(srcVal);
+            // replace("기존 값","변경할 값")
+            $("#sec_1 img").attr({
+                    "width": 200,//단위 적어주지 않으면 픽셀 단위로 인식한다. 
+                    "src": srcVal.replace("1.jpg", "2.jpg"),
+                    "alt": "바위",
+                    "title": "바위"
+             }).removeAttr("border");
+             $("button").hide();
+        }
+        </script>
+    </head><section id="sec_1">
+            <h2>이미지 속성</h2>
+            <p><img src="img/index_1.jpg" alt="가위" title="가위" border="2"></p>
+            <button onclick="gbb()">클릭</button>
+        </section>
+    <body>
+        <h1><strong>객체 조작 및 생성</strong></h1>
+        
+    </body>
+</html>

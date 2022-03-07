@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>셀렉터</title>
+        <script src="jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript">
+        /*
+        $("선택한 요소").replaceWith("변경할요소") : 선택한 요소를 변경할 요소 로 변경함.       
+        $("변경할 요소").replaceAll("선택한 요소") : 선택한 요소로 변경할 요소 를 변경함.
+        */
+
+        function gbb() {
+            $("h2").replaceWith("<h3>replace method</h3>");
+		    $("<p>Change</p>").replaceAll("div");
+        }
+        </script>
+    </head>
+    <body>
+        <section class="box1">
+            <h2>제목1</h2>
+            <div>내용1</div>
+            <div>내용2</div>
+        </section>
+        <section class="box2">
+            <h2>제목2</h2>    
+            <div>내용3</div>
+            <div>내용4</div>
+        </section>
+        <button onclick="gbb()">클릭</button>
+    </body>
+</html>

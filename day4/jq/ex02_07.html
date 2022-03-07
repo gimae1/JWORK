@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="jquery/3.5.1/jquery.js"></script>
+<script>
+	$(function(){
+		var style_1 = {
+			"background-color":"aqua",
+			"border":"2px solid #f00"
+		}
+		var style_2 = {
+			"background-color":"yellow",
+			"border":"2px dashed #f00"
+		}
+
+		var style_3 = { "background-color":"red" }
+		
+		// prevAll() : 바로 이전 요소들 모두 선택. 바로 앞 요소들 모두 선택.
+		$(".txt").prevAll( ).css(style_1);
+		// nextAll() : 바로 다음 요소들 모두 선택. 바로 다음 요소들 모두 선택.
+		$(".txt").nextAll( ).css(style_2);
+		$("#wrap1 > .txt1").siblings( ).css(style_3);   
+	});
+</script>
+</head>
+<body>
+	<div id="wrap">
+		<h1>인접 관계 선택자</h1>
+		<p>내용1</p>
+		<p class="txt">내용2</p>
+		<p>내용3</p>
+		<p>내용4</p>
+	</div>
+	<div id="wrap1">
+		<h1>인접 관계 선택자</h1>
+		<p>내용1</p>
+		<p class="txt1">내용2</p>
+		<p>내용3</p>
+		<p>내용4</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 버튼 조작</title>
+<style>
+ div img{
+ 	width:150px;
+ }
+</style>
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(function() {
+	var Iwidth = 150;
+	$(".btn").on("click", zInOut);
+	
+	function zInOut( ) {
+		if($(this).hasClass("zOut")){//클릭한 객체가 어떤 클래스 가지고 있는지
+			if(Iwidth<=50) return false;
+			Iwidth=Iwidth-20;
+		}else if($(this).hasClass("zIn")){
+			if(Iwidth>=500) return false;
+			Iwidth=Iwidth+20;
+		}else{
+			Iwidth = 150;	
+		}
+		$(".text_line").text("이미지 사이즈 : "+$('div img').width() + "px");		
+		$("div img").css({'width': Iwidth +"px"});
+	}
+	
+});
+
+</script>
+</head>
+<body>
+<div class="zBtn">
+<button class="btn zOut">-</button>
+<button class="btn obtn">100%</button>
+<button class="btn zIn">+</button>
+</div>
+<div class="index_img">
+<img src="img/index.jpg">
+<p class="text_line"></p>
+</div>
+
+</body>
+</html>

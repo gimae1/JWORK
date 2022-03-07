@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        var arr = [
+            {
+                title: '다음',
+                url: 'www.daum.net'
+            }, 
+            {
+                title: '구글',
+                url: 'www.google.net'
+            }
+        ];
+
+        $.each(arr, function (index, item) {
+            var result = '';
+            // result += index + ' : ' + item.title + ' , ' + item.url;
+            result += index + ' : ' + item;//0 : [object Object(자료형)]
+            console.log(result);
+        });
+        console.log("==== The End 1 ====");
+
+        $.each($("#menu2 li"), function (i, o) {
+            console.log(i + ":", o);
+        });
+        console.log("==== The End 2 ====");
+    });
+</script>
+</head>
+<body>
+	<h1>탐색 선택자</h1>
+	<ul id="menu1">
+		<li>내용1-1</li>
+		<li>내용1-2</li>
+		<li>내용1-3</li>
+	</ul>
+	<ul id="menu2">
+		<li>내용2-1</li>
+		<li>내용2-2</li>
+		<li>내용2-3</li>
+	</ul>
+</body>
+</html>

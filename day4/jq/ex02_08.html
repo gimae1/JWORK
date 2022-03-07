@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 선택자 </title>  
+<script src="jquery/3.5.1/jquery.js"></script>
+<script>
+	$(function(){
+		var style_4 = {
+			"background-color":"green",
+			"border":"2px solid #555"
+		}
+
+		// $(“선택자”).prevUtil(“요소명”) : 선택자 요소부터 지정한 요소 바로 전까지 그 안에 있는 요소 모두 선택.
+		$(".txt3").prevUntil(".title").css(style_4);
+		// $(“선택자”).nextUtil(“요소명”) : 선택자 요소부터 지정한 요소 이전까지 안에 있는 요소 모두 선택.
+		$(".txt3").nextUntil(".txt6").css(style_4);
+	});
+</script>
+</head>
+<body>
+	<div>
+		<h1 class="title">선택자</h1>
+		<p>내용1</p>
+		<p>내용2</p>
+		<p class="txt3">내용3</p>
+		<p>내용4</p>
+		<p>내용5</p>
+		<p class="txt6">내용6</p>
+	</div>
+</body>
+</html>

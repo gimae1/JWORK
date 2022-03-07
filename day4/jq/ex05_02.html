@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8"><title>셀렉터</title>
+<script src="jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript">
+   $(document).ready(function() {	   
+      var resultText = "";
+      // 그룹선택자의 엘리먼트들이 인덱스에 맞춰 오름차순으로 정렬됨.  
+      var $searchEles = $('p, span, div.simpletext1');
+      resultText += "엘리먼트 개수: " + $searchEles.length + "\n";
+      $searchEles.each(function() {// $('p').each(function() {//$('span').each(function()... 
+         console.log("$(this) : "+$(this).prop('tagName'));   	  
+         resultText += $(this).text() + ", ";
+      });   
+      
+      // $.each($searchEles, function(){
+      //    console.log("$(this) : "+$(this).prop('tagName'));   	  
+      //    resultText += $(this).text() + ", ";
+      // });
+      alert($.trim(resultText));
+
+      $searchEles.each(function(i) {   //i : 인덱스	  
+         console.log(i + " : " + $(this).text());
+      }); 
+      
+   });
+</script>
+</head><body>
+   <span>simple</span>
+   <div class='simpletext1'>jQuery</div>
+   <div>basic</div>
+   <p>example</p>
+</body></html>

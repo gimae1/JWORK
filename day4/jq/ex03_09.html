@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta charset="UTF-8">
+        <title>탐색</title>
+        <style>
+            span { color: blue; }
+        </style>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script>
+            $(function () {
+                $('button').click(function () {//익명함수가 매개변수로 존재 실행하면ㅅ서 값을 자체적으로 돌려줌
+                    // 해당 엘리먼트의 자식 엘리먼트들 찾기
+                    $("div").children().css("border-bottom", "3px double red");
+                    $("div").children(".selected").css("color", "red");
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button>엘리먼트에 스타일 입히기</button>
+        <p>이곳은 문단</p>
+        <div><span class="selected">이곳은 div의 차일드 span</span></div>
+        <p>그리고 <span>여기는 또 다른</span> 문단</p>
+        <div>마지막으로 <span>이곳은 div의 차일드 span,</span> 이곳은 div</div>
+    </body>
+</html>

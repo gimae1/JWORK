@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>값</title>
+        <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript">
+            $(function () {
+                $('h1').hover(function () {
+					//마우스 포인터가 선택 영역에 들어갔을 경우
+                    $(this).css('color', 'red');
+                }, function () {
+					//마우스 포인터가 선택 영역에서 나갔을 경우
+                    $(this).css('color', 'black');
+                });
+                
+                $('h2').on({
+                    "mouseover" : function () {
+					//마우스 포인터가 선택 영역에 들어갔을 경우
+                    $(this).css('color', 'hotpink');
+                    }, 
+                    "mouseleave" : function () {
+                        //마우스 포인터가 선택 영역에서 나갔을 경우
+                        $(this).css('color', 'black');
+                    }
+                
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>test1</h1>
+        <h2>test2</h2>
+    </body>
+</html>

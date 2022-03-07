@@ -1,0 +1,52 @@
+<!DOCTYPE html><html><head>
+<meta charset="UTF-8">
+<title>선택자(selector)</title>
+<style type="text/css">
+   .spotlight { background-color: #ff0; }
+   .redtext { color: rgb(104, 94, 94); }
+   .largetext { font-size: 30pt; }
+   .italictext { font-style: italic; }
+</style>
+
+<!-- 네트워크 전송 방식 (CDN : Content Delivery Network) : 온라인에서 제공하는 제이쿼리 라이브러리 파일을 네트워크를 통해 html에 불러오는 방식임 
+3.6.0 :현재 가장 최신 버전임. -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+   // 선택자사용하기
+   // 형식 $('선택자') :document처럼 객체를 제외하고는 선택자(css의 선택자와 동일)를 기술할 경우 따옴표(큰따옴표, 작은 따옴표 모두 가능)로 묶어 준다.
+   // addClass() : 해당 선택자에 class속성 추가하기.
+   // removeClass() : 해당 선택자에 class속성 제거하기.
+   // hide() : 해당 선택자 엘리먼트 숨기기(none과 동일). 영역까지 제거함.
+   // show() : 해당 선택자 엘리먼트 보이기. 엘리먼트 고유 속성 그대로 보여짐.
+   
+   function startFnc(){
+      $("span").addClass('redtext');//jquery("span") 과 같은 뜻이다.
+      $('div').addClass('spotlight');//div 에 class 추가 
+      $('#simpletext1').addClass('largetext');      
+      $('.simpletext1').addClass('italictext');
+      $('#fbtn').hide();//display none 영역까지 없엔다
+      $('#ebtn').show();//
+   }
+
+
+   function endFnc(){
+      $("span").removeClass('redtext');
+      $('div').removeClass('spotlight');
+      $('#simpletext1').removeClass('largetext');      
+      $('.simpletext1').removeClass('italictext');
+      $('#fbtn').show();
+      $('#ebtn').hide();
+   }
+   $(document).ready(function() {
+      $('#ebtn').hide();
+   });
+   
+</script>
+</head><body>
+   <span id="simpletext1">simple</span>
+   <div class="simpletext1">jQuery</div>   
+   <span id="simpletext2">basic</span>
+   <div id="simpletext3">example</div><br>
+   <button id="fbtn" onclick="startFnc()">제이쿼리 적용하기</button>
+   <button id="ebtn" onclick="endFnc()">제이쿼리 제거하기</button>
+</body></html>
