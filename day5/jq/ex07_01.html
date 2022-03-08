@@ -1,0 +1,63 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>효과</title>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+	p { width: 400px; height: 90px; }
+	#oneDiv {margin-bottom:30px;}
+	#oneDiv div , #twoDiv div{ position: absolute; width: 400px; height: 70px;
+		font-size: 35px; text-align: center; color: yellow;
+		background: #333; padding-top: 25px; display: none;}
+	#oneDiv div { top: 46px; left: 8px;} 
+	#twoDiv div { top: 166px; left: 8px;} 
+	span { display: none; } 
+</style><script>
+	$(function() {
+		// fadeIn( [duration ] [, easing ] [, complete ] ) 
+		// - 선택한 요소를 서서히 나타나게 하는 기능.
+		// duration(시간) : fast(대략: 200) | slow(대략: 600) | 숫자값 입력(1/1000초).
+		// 입력값이 없을 경우 기본값 400으로 설정됨.
+		// easing(모양-시간당 속도 함수값) : 'swing'(기본값) | 'linear'
+		// swing : 시작과 끝은 느리게, 중간은 빠른 속도로
+		// linear : 일정한 속도로
+		// complete : 실행할 함수
+		$(".fadeIn").click(function() { 
+			$("#oneDiv div").fadeIn(2000, function() {
+				$("#oneDiv span").fadeIn(1000);
+			});
+
+			$("#twoDiv div").fadeIn(2000, 'linear', function() {
+				$("#twoDiv span").fadeIn(1000,  'linear');
+			});
+		});
+		$(".fadeOut").click(function() { 
+			$("#oneDiv div").fadeOut(2000, function() {
+				$("#oneDiv span").fadeOut(1000);
+			});
+
+			$("#twoDiv div").fadeOut(2000, 'linear', function() {
+				$("#twoDiv span").fadeOut(1000,  'linear');
+			});
+		});
+		$(".fadeToggle").click(function() {
+			$("#oneDiv div").fadeToggle(2000, function() {
+				$("#oneDiv span").fadeToggle(1000);
+			});
+
+			$("#twoDiv div").fadeToggle(2000, 'linear', function() {
+				$("#twoDiv span").fadeToggle(1000,  'linear');
+			});
+		});
+	});
+</script></head><body>
+	<button class="fadeIn">fade In</button>
+	<button class="fadeOut">fade Out</button>
+	<button class="fadeToggle">fade Toggle</button>
+	<div id="oneDiv">
+		<p>불투명도 조절. speed는 fast, normal, slow 또는 0 이상의 숫자(밀리세컨드 단위)를 설정할 수 있다. 애니메이션이 끝난 후에 실행할 함수를 지정할 수 있다.</p>
+		<div><span>S U C C E S S !</span></div>
+	</div>
+	<div id="twoDiv">
+		<p>불투명도 조절. speed는 fast, normal, slow 또는 0 이상의 숫자(밀리세컨드 단위)를 설정할 수 있다. 애니메이션이 끝난 후에 실행할 함수를 지정할 수 있다.</p>
+		<div><span>S U C C E S S !</span></div>
+	</div>
+</body></html>

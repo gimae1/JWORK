@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+  <h2>3개의 동일한 컬럼들(Columns)</h2>
+  <p>지정된 수의 요소에 .col 클래스를 사용하면 ""부트스트랩"이 요소가 몇 개나 있는지 인식하고 너비가 같은 열을 만듭니다. 아래 예제에서는 각각 33.33%의 폭을 갖는 세 개의 콜 요소를 사용합니다.</p>
+  <div class="row">
+    <div class="col bg-success">.col</div><!-- bg-color 관여하는 class -->
+    <div class="col bg-warning">.col</div>
+    <div class="col bg-success">.col</div>
+    <div class="col bg-success">.col</div>
+    <div class="col bg-success">.col</div>
+    <div class="col bg-success">.col</div>
+    <div class="col bg-success">.col</div>
+  </div>
+
+  <h2>3개의 동일한 컬럼들(Columns)</h2><!-- bootstrap 은 gird를 12칸으로 나눈다 -->
+  <p>숫자를 사용하여 열 너비를 제어할 수도 있습니다. 합계는 항상 12가 되어야 합니다.</p>
+  <div class="row">
+    <div class="col-1 bg-success">.col-4</div>
+    <div class="col-11 bg-warning">.col-4</div>
+    <!-- <div class="col-6 bg-success">.col-4</div> -->
+  </div>
+</div>
+
+</body>
+</html>

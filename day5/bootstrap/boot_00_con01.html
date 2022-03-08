@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <style>
+      div { border : 1px solid black; }
+      .container-fluid{ margin-top:50px; }
+      .container, .container-fluid{background-color: red;}
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <!-- 컨테이너는 내용물을 채워 넣는 데 사용되며 두 가지 컨테이너 클래스를 사용할 수 있다.
+    .container 클래스 :  고정 너비 컨테이너를 제공한다.
+    .container-fluid 클래스 : 뷰포트의 전체 너비를 제공한다. -->
+    <div class="container">
+        <h1>.container</h1>
+        <p>이 부분은 .container가 적용되고 있는 부분이다.</p> 
+        <p>.container는 가운데 정렬, 고정 가로폭을 제공한다.</p>           
+    </div>
+	<!-- .container-sm : 100%(<576px),540px(>=576px),720px(>=768px),960px(>=992px)	1140px(>=1200px) -->
+    <div class="container-sm">.container-sm</div>
+    <!-- .container-sm : 100%(<576px),100%(>=576px),720px(>=768px),960px(>=992px)	1140px(>=1200px) -->
+    <div class="container-md mt-3">.container-md</div>
+    <!-- .container-sm : 100%(<576px),100%(>=576px),100%(>=768px),960px(>=992px)	1140px(>=1200px) -->
+    <div class="container-lg mt-3">.container-lg</div>
+    <!-- .container-sm : 100%(<576px),100%(>=576px),100%(>=768px),100%(>=992px)	1140px(>=1200px) -->
+    <div class="container-xl mt-3">.container-xl</div>
+
+
+    <div class="container-fluid">
+        <h1>이 부분은 .container-fluid가 적용되고 있는 부분이다.</h1>
+        <p>.container-fluid는 뷰포트의 전체 너비를 제공한다.</p>       
+    </div>
+
+</body>
+</html>

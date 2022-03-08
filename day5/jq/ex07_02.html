@@ -1,0 +1,32 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8">
+<title>애니메이트</title>
+<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+	#region { position: relative; width: 200px; height: 200px;overflow: hidden; margin: auto; border: 1px solid #333; }
+	#images { width: 400px; height: 200px; }
+	#images a img { width: 200px; height: 200px; border: 0;position: relative; }
+	#direction { width: 350px; margin: auto; }
+	.leftbtn { float: left; }
+	.rightbtn { float: right; }
+</style><script>
+	$(function() {
+		// animate({스타일속성}, 적용시간 | 가속도 | 콜백함수) : 다양한 동작효과를 적용할 수 있다.
+		// 스타일속성명은 -를 제외하고, 카멜기법으로 표기
+		$('.leftbtn').click(function(event) {
+			$('#images').animate({ marginLeft : -200 }, 1000);
+		});
+		$('.rightbtn').click(function(event) {
+			$('#images').animate({ marginLeft : 0 }, 1000);
+		});
+	});
+</script></head><body>
+	<div id="region">
+			<div id="images">
+			<a href="#"><img src="img/cute_dog.jpg"></a><a href="#"><img src="img/namu.png"></a>
+			</div>
+	</div>
+	<div id="direction">
+		<button class="leftbtn">&lt;</button>
+		<button class="rightbtn">&gt;</button>
+	</div>
+</body></html>
