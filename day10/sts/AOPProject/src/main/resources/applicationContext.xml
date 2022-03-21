@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd">
+
+<!-- <bean id="tv" class="polymorphism.SamsungTV" init-method="initMethod"/> -->
+<!-- <bean id="tv" class="polymorphism.SamsungTV" lazy-init="true" /> -->
+	<!-- <bean id="tv" class="polymorphism.SamsungTV"/> --> <!--  타입을 지정하지 않으면 싱글톤 패턴이다 -->
+<!-- 	<bean id="tv" class="polymorphism.SamsungTV" scope="prototype"></bean>  -->
+<!--매개변수의 갯수가 하나일때는 순서 상관 없이 기술을 해도  -->
+<!--매개변수의 갯수가 동일한 생성자가 존재할 때는 순서 에 따라 기술을 해야 해당 생성자가 호출이 된다.  -->
+<!-- 	<bean id="tv" class="polymorphism.SamsungTV" p:speaker-ref="sony" p:price="2700000"></bean>  -->
+<!-- 		<property name="speaker" ref="apple"></property> -->
+<!-- 		<property name="price" value="2700000"></property> -->
+<!-- 	<constructor-arg index="1" ref="sony"></constructor-arg> -->
+<!-- 	<constructor-arg index="0" value="2700000"></constructor-arg> -->
+<!-- 	<constructor-arg index="1" ref="apple"></constructor-arg> -->
+<!-- 	<constructor-arg index="0" value="2700000"></constructor-arg> -->
+<!-- 	<bean id="sony" class="polymorphism.SonySpeaker"></bean> -->
+<!-- 	<bean id="apple" class="polymorphism.AppleSpeaker"></bean> -->
+	
+	<!-- p131 -->
+	<context:component-scan base-package="com.springbook.biz"></context:component-scan>
+			
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+	
+	
+	<!-- p159 -->
+<!-- 	<bean id="log" class="com.springbook.biz.common.LogAdvice"></bean> -->
+<!-- 	<aop:config>* 또는  void 또는 !void 만 리턴타입으로 올 수 있다 -->
+<!-- 		<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/> -->
+<!-- 		<aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))"/> -->
+<!-- 		<aop:aspect ref="log"> -->
+<!-- 			<aop:before pointcut-ref="getPointcut" method="printLog"/> -->
+<!-- 		</aop:aspect> -->
+<!-- 	</aop:config> -->
+
+	<!-- p178-179 -->
+<!-- 	<bean id="before" class="com.springbook.biz.common.BeforeAdvice"></bean> -->
+<!-- 	<aop:config> -->
+<!-- 		<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/> -->
+<!-- 		<aop:aspect ref="before"> -->
+<!-- 			<aop:before pointcut-ref="allPointcut" method="beforeLog"/> -->
+<!-- 		</aop:aspect> -->
+<!-- 	</aop:config> -->
+	
+	<!-- p180-181 -->
+<!-- 	<bean id="afterReturning" class="com.springbook.biz.common.AfterReturningAdvice"></bean> -->
+<!-- 	<aop:config> -->
+<!-- 		<aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))"/> -->
+<!-- 		<aop:aspect ref="afterReturning"> -->
+<!-- 			<aop:after-returning pointcut-ref="getPointcut" method="afterLog" returning="returnObj"/> -->
+<!-- 		</aop:aspect> -->
+<!-- 	</aop:config> -->
+
+<!-- 			<bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl"> -->
+<!-- 			<property name="userDAO" ref="userDAO"></property> -->
+<!-- 		</bean> -->
+		
+<!-- 		<bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO"></bean> -->
+	
+	<!-- p182-183 -->
+<!-- 	<bean id="afterThrowing" class="com.springbook.biz.common.AfterThrowingAdvice"></bean> -->
+	<!-- p184-185 -->
+<!-- 	<bean id="after" class="com.springbook.biz.common.AfterAdvice"></bean> -->
+	<!-- p182-183 -->
+<!-- 	<aop:config> -->
+<!-- 		<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/> -->
+<!-- 		<aop:aspect ref="afterThrowing"> -->
+<!-- 			<aop:after-throwing pointcut-ref="allPointcut" method="exceptionLog" throwing="exceptObj"/> -->
+<!-- 		</aop:aspect> -->
+	<!-- p184-185 -->
+<!-- 		<aop:aspect ref="after"> -->
+<!-- 		<aop:after pointcut-ref="allPointcut"  method="finallyLog"/> -->
+<!-- 		</aop:aspect> -->
+<!-- 	</aop:config> -->
+
+	<!-- p186-188 -->
+	
+<!-- 	<bean id="around" class="com.springbook.biz.common.AroundAdvice"></bean> -->
+<!-- 	<aop:config> -->
+<!-- 		<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/> -->
+<!-- 		<aop:aspect ref="around"> -->
+<!-- 			<aop:around pointcut-ref="allPointcut" method="aroundLog"/> -->
+<!-- 		</aop:aspect> -->
+<!-- 	</aop:config> -->
+	
+<!-- 		<bean id="userService" class="com.springbook.biz.user.impl.UserServiceImpl"> -->
+<!-- 			<property name="userDAO" ref="userDAO"></property> -->
+<!-- 		</bean> -->
+		
+<!-- 		<bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO"></bean> -->
+
+
+
+</beans>
