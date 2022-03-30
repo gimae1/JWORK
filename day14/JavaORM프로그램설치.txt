@@ -1,0 +1,20 @@
+Java ORM Plugin for Eclipse 플러그인 설치방법
+
+https://sourceforge.net/projects/java-orm-plugin/
+Download클릭
+JavaORMPlugin.zip 파일압축해제
+JavaORMPlugin > plugins > JavaORMPlugin_1.0.0.201411180016.jar 파일 복사
+스프링툴수트 프로그램 종료하기
+C:\sts-bundle > sts-3.9.13.RELEASE > plugins 안에 붙여넣기
+
+
+board-mapping.xml파일 만들기
+
+src/main/resource -> mapping폴더 생성 -> New - other - java orm plugin - Mybatis Mapper XML - Next -
+Container [ /프로젝트명 ] , Mybatis Mapper name [ board-mapping.xml ]을 생성
+
+
+sql-map-config.xml파일 만들기
+src/main/resource -> New - other - java orm plugin - Mybatis Configuration XML ->
+Container [ /프로젝트명 ] , Mybatis Configuraion name [ sql-map-config.xml ]을 생성 후 src/main/resource로 
+위치 옮겨줄것
